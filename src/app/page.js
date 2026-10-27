@@ -1,6 +1,7 @@
 import Hero from "@/component/Hero";
 import SkillCard from "@/component/SkillCard";
 import Kartu from "@/component/Kartu";
+import Footer from "@/component/Footer";
 
 const skills = [
   { nama: "HTML", level: "Menengah" },
