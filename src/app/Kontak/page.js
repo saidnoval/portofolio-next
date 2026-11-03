@@ -18,7 +18,7 @@ export default function Kontak() {
       </p>
 
       <div className="mt-8 grid gap-8 md:grid-cols-2">
-        {/* Form Kontak */}
+        
         <section className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
           <h2 className="mb-5 text-2xl font-bold text-utama">
             Kirim Pesan
@@ -36,7 +36,7 @@ export default function Kontak() {
                 type="text"
                 id="nama"
                 name="nama"
-                placeholder="Contoh: Budi Santoso"
+                placeholder="Contoh: Said Noval"
                 required
                 className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2"
               />
