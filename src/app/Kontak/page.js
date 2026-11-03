@@ -1,8 +1,7 @@
 
 export const metadata = {
   title: "Kontak",
-  description:
-    "Hubungi Moch Said Abu Noval melalui form kontak, email, atau GitHub.",
+  description: "Hubungi saya melalui halaman kontak.",
 };
 
 export default function Kontak() {
@@ -13,74 +12,77 @@ export default function Kontak() {
       </h1>
 
       <p className="mt-3 text-lg text-gray-700">
-        Punya pertanyaan atau ingin bekerja sama?
-        Silakan hubungi saya melalui form berikut.
+        Punya pertanyaan atau ingin bekerja sama? Isi form berikut.
       </p>
 
-      <div className="mt-8 grid gap-8 md:grid-cols-2">
-        
+      <div className="mt-8 grid gap-6 md:grid-cols-2">
+        {/* Form Kontak */}
         <section className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-          <h2 className="mb-5 text-2xl font-bold text-utama">
-            Kirim Pesan
-          </h2>
-
           <form className="space-y-4">
             <div>
-              <label
-                htmlFor="nama"
-                className="block font-semibold"
-              >
+              <label htmlFor="nama" className="block font-semibold">
                 Nama lengkap
               </label>
               <input
                 type="text"
                 id="nama"
                 name="nama"
-                placeholder="Contoh: Said Noval"
+                placeholder="Contoh: Budi Santoso"
                 required
                 className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2"
               />
             </div>
 
             <div>
-              <label
-                htmlFor="email"
-                className="block font-semibold"
-              >
+              <label htmlFor="email" className="block font-semibold">
                 Email
               </label>
               <input
                 type="email"
                 id="email"
                 name="email"
-                placeholder="nama@email.com"
+                placeholder="nama@gmail.com"
                 required
                 className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2"
               />
             </div>
 
             <div>
-              <label
-                htmlFor="subjek"
-                className="block font-semibold"
-              >
-                Subjek
+              <label htmlFor="nomorHp" className="block font-semibold">
+                Nomor HP
               </label>
               <input
-                type="text"
-                id="subjek"
-                name="subjek"
-                placeholder="Subjek pesan"
+                type="tel"
+                id="nomorHp"
+                name="nomorHp"
+                placeholder="081234567890"
                 required
                 className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2"
               />
             </div>
 
             <div>
-              <label
-                htmlFor="pesan"
-                className="block font-semibold"
+              <label htmlFor="keperluan" className="block font-semibold">
+                Keperluan
+              </label>
+              <select
+                id="keperluan"
+                name="keperluan"
+                required
+                defaultValue=""
+                className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2"
               >
+                <option value="" disabled>
+                  -- Pilih keperluan --
+                </option>
+                <option value="Kerja Sama">Kerja Sama</option>
+                <option value="Pertanyaan">Pertanyaan</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="pesan" className="block font-semibold">
                 Pesan
               </label>
               <textarea
@@ -88,7 +90,7 @@ export default function Kontak() {
                 name="pesan"
                 rows={5}
                 maxLength={300}
-                placeholder="Tuliskan pesan kamu..."
+                placeholder="Tulis pesanmu di sini"
                 required
                 className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2"
               />
@@ -96,7 +98,7 @@ export default function Kontak() {
 
             <button
               type="submit"
-              className="w-full rounded-lg bg-utama px-5 py-3 font-semibold text-white"
+              className="w-full rounded-lg bg-utama px-5 py-2 font-semibold text-white"
             >
               Kirim Pesan
             </button>
@@ -108,21 +110,14 @@ export default function Kontak() {
           </p>
         </section>
 
-
-        <section className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-          <h2 className="mb-5 text-2xl font-bold text-utama">
-            Temukan Saya
+        <section className="h-fit rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h2 className="mb-4 text-xl font-bold text-utama">
+            Temukan Saya di
           </h2>
 
-          <p className="mb-4 text-gray-700">
-            Kamu juga dapat menghubungi saya melalui:
-          </p>
-
-          <div className="space-y-4">
+          <div className="space-y-3">
             <div>
-              <h3 className="font-semibold text-utama">
-                GitHub
-              </h3>
+              <h3 className="font-semibold text-utama">GitHub</h3>
               <a
                 href="https://github.com/saidnoval"
                 target="_blank"
@@ -134,11 +129,8 @@ export default function Kontak() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-utama">
-                Email
-              </h3>
               <a
-                href="mailto:saidoval81@gmail.com"
+                href="mailto:EMAIL_KAMU"
                 className="text-blue-600 hover:underline"
               >
                 saidnoval81@gmail.com

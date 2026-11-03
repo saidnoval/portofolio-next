@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 
 export default function Hero({ nama, tagline }) {
@@ -9,7 +10,7 @@ export default function Hero({ nama, tagline }) {
         width={180}
         height={180}
         loading="eager"
-        className="rounded-full border-4 border-aksen"
+        className="h-[180px] w-[180px] rounded-full border-4 border-aksen object-cover"
       />
 
       <div>
