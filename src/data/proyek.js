@@ -29,7 +29,7 @@ export const proyek = [
     slug: "tabel-jadwal",
     judul: "Tabel Jadwal Belajar",
     kategori: "HTML",
-    minggu: "Minggu 02",
+    minggu: "Minggu 03",
     gambar: "/proyek/proyek-jadwal.png",
     deskripsi: "Jadwal belajar mingguan dengan thead dan tbody.",
     fitur: [
@@ -55,7 +55,7 @@ export const proyek = [
     slug: "kalkulator-nilai",
     judul: "Kalkulator Nilai Rapor",
     kategori: "JavaScript",
-    minggu: "Minggu 06",
+    minggu: "Minggu 05",
     gambar: "/proyek/proyek-kalkulator.png",
     deskripsi: "Rata-rata dan predikat nilai dengan fungsi JavaScript.",
     fitur: [
