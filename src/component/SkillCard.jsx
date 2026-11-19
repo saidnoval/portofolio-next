@@ -1,13 +1,13 @@
-export default function SkillCard({ nama, level }) {
-  return (
-    <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-      <h3 className="text-lg font-semibold text-utama">
-        {nama}
-      </h3>
+import { Badge } from "./ui/badge";
+import { Card, CardHeader, CardTitle } from "./ui/card";
 
-      <p className="mt-1 text-sm text-gray-600">
-        Level: {level}
-      </p>
-    </div>
-  );
+export default function SkillCard({nama, level}) {
+    return (
+        <Card>
+            <CardHeader>
+                <CardTitle className="text-lg text-primary">{nama}</CardTitle>
+                <Badge variant="outline">level: {level}</Badge>
+            </CardHeader>
+        </Card>
+    )
 }

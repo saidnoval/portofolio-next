@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import ProyekCard from "@/component/ProjectCard";
+import ProyekCard from "@/component/ProyekCard";
 
 export default function FilterProyek({ proyek }) {
   const [kategori, setKategori] = useState("Semua");

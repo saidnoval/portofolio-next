@@ -1,8 +1,11 @@
 export default function Footer() {
+    const tahun = new Date().getFullYear();
+
     return (
-        <footer className="mt-auto border-gray-200 py-4 text-center text-sm text-gray-600">
-            &copy; {new Date().getFullYear()} © Moch Said Abu Noval.
-          Hak cipta dilindungi.Dibuat dengan Next.js di Kelas Industri UBIG
+        <footer className="mt-auto bg-utama p-6 text-center text-latar">
+            <p className="text-sm text-muted-foreground dark:textgray-400">
+                &copy; {tahun} Moch Said Abu Noval. Dibuat Next.js di Kelas Industri UBIG
+            </p>
         </footer>
     );
 }
