@@ -11,7 +11,7 @@ export default function Hero({ nama, tagline }) {
                 />
                 <img
                     src="/proyek/foto-1.png"
-                    alt="Foto 2"gut
+                    alt="Foto 2"
                     className="absolute inset-0 w-full h-full object-cover rounded-full z-10 transition-transform duration-400 ease-out group-hover:shadow-lg shadow-blue-600 group-hover:rotate-180 group-hover:translate-x-30"
                 />
                 <img
