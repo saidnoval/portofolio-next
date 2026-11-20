@@ -1,30 +1,73 @@
 
-
 import FormKontak from "@/component/FormKontak";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+} from "@/component/ui/card";
 
 export const metadata = {
-    title: "Kontak",
-    description: "daftar proyek HTML, CSS dan JavaScript karya Azqal Andhika"
+  title: "Kontak",
+  description: "Hubungi saya melalui halaman kontak.",
 };
 
 export default function Kontak() {
-    return (
-        <main className="mx-auto max-w-5xl px-5 py-10">
-            <h1 className="text-3xl font-bold text-primary dark:textsky-200 md:text-4xl">Kontak Saya</h1>
-            <p className="mt-3 text-lg text-muted-foreground dark:textgray-300">Halaman ini akan berisi form Kontak saya</p>
+  return (
+    <main className="min-h-screen bg-latar px-6 py-10 transition-colors dark:bg-gray-950">
+      <div className="mx-auto max-w-5xl">
+        <h1 className="text-3xl font-bold text-utama transition-colors dark:text-white md:text-4xl">
+          Hubungi Saya
+        </h1>
 
-            <div className="mt-8 grid gap-6 md:grid-cols-3">
-                <section className="rounded-xl border border-border dark:border-gray-700 bg-card p-6 shadow-sm md:col-span-2">
-                    <FormKontak/>
-                </section>
+        <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
+          Punya pertanyaan atau ingin bekerja sama? Isi form berikut.
+        </p>
 
-                <div className=" bg-card p-4 rounded-lg">
-                    <h2 className="text-primary dark:textsky-200 font-bold text-2xl">Temukan Saya di</h2>
-                    <p>GitHub</p>
-                    <a href="https://github.com/saidnoval">saidnoval81@gmail.com</a>
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <Card className="bg-white dark:bg-gray-800">
+            <CardContent className="p-6">
+              <FormKontak />
+            </CardContent>
+          </Card>
+
+          <Card className="h-fit bg-white dark:bg-gray-800">
+            <CardHeader>
+              <CardTitle className="text-xl text-utama dark:text-white">
+                Temukan Saya di
+              </CardTitle>
+            </CardHeader>
+
+            <CardContent>
+              <div className="space-y-3">
+                <div>
+                  <h3 className="font-semibold text-utama dark:text-gray-200">
+                    GitHub
+                  </h3>
+
+                  <a
+                    href="https://github.com/saidnoval"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline dark:text-blue-400"
+                  >
+                    Kunjungi GitHub saya
+                  </a>
                 </div>
-            </div>
 
-        </main>
-    );
-};
+                <div>
+                  <a
+                    href="mailto:saidnoval81@gmail.com"
+                    className="text-blue-600 hover:underline dark:text-blue-400"
+                  >
+                    saidnoval81@gmail.com
+                  </a>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </main>
+  );
+}

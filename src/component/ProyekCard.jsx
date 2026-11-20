@@ -1,30 +1,44 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Badge } from "./ui/badge";
-import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
-export default function ProyekCard ({proyek}) {
+export default function ProyekCard({ proyek }) {
     return (
         <Link
             href={`/Proyek/${proyek.slug}`}
-            className="block overflow-hidden rounded-xl border border-border dark:border-gray-700 bg-card shadow-sm hover:shadow-md "
+            className="block overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
         >
-            <Card className="h-full">
             <Image
-                src={proyek.gambar_url}
-                alt={`tangkapan layar ${proyek.judul}`}
+                src={proyek.gambar}
+                alt={`Tangkapan layar ${proyek.judul}`}
                 width={640}
-                height={420}
-                className="h-auto w-full"
+                height={400}
+                className="h-52 w-full object-cover"
             />
 
-            <CardHeader>
-                <Badge>{proyek.kategori}</Badge>
+            <div className="space-y-3 p-5">
+                <div className="flex items-center justify-between gap-3">
+                    <span className="rounded-full bg-utama px-3 py-1 text-xs font-medium text-white">
+                        {proyek.kategori}
+                    </span>
 
-                <CardTitle className="text-lg text-primary">{proyek.judul}</CardTitle>
-                <CardDescription>{proyek.deskripsi}</CardDescription>
-            </CardHeader>
-            </Card>
+                    <span className="text-sm text-gray-500">
+                        {proyek.minggu}
+                    </span>
+                </div>
+
+                <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100">
+                    {proyek.judul}
+                </h2>
+
+                <p className="line-clamp-3 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                    {proyek.deskripsi}
+                </p>
+
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-utama dark:text-sky-200">
+                    Lihat Detail
+                    <span aria-hidden="true">→</span>
+                </span>
+            </div>
         </Link>
-    )
+    );
 }
